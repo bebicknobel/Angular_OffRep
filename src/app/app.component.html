@@ -1,1 +1,73 @@
-<p>{{title}}</p>
+
+<h1>{{title}}</h1>
+
+
+
+<input placeholder="Enter Your name" [(ngModel)]="name" />
+
+
+<p>MY Name is {{name}}</p>
+
+
+<button (click)="countInc()">Butto Increament</button>
+<h1>Count :{{countval}}</h1>
+
+
+
+<button (click)="countDec()">Button Decreament</button>
+<h1>Count Decreament:{{countval}}</h1>
+
+<!-- Index -->
+ <h3>Index</h3>
+<ul>
+  <li *ngFor="let fruit of fruits;let i=index">{{i+1}} {{fruit}}</li>
+</ul>
+
+<!-- First And Last -->
+ <h3>First And Last</h3>
+
+<ul>
+  <li *ngFor="let fruit of fruits;let isFirst=first;let isLast=last">
+     <strong *ngIf="isFirst">First:</strong>
+     <strong *ngIf="isLast">Last:</strong>
+    {{fruit}}
+  </li>
+</ul>
+
+<!-- Even And Odd -->
+ <h3>Even And Odd </h3>
+<ul>
+  <li *ngFor="let fruit of fruits;let isEven=even;let isOdd=odd" [ngClass]="{'even-item':isEven,'odd-item':isOdd}">
+    
+     {{fruit}}
+  </li>
+</ul>
+
+<!--Hide and show -->
+ <h3>Hide and Show </h3>
+<input type="checkbox" [(ngModel)]="showMe"/>
+ <p *ngIf="showMe">Welcome to the Angular FrameWork</p>
+
+<!--Hide and show using ngClass-->
+<h3>Hide and show using ngClass</h3>
+<input type="checkbox" [(ngModel)]="applyColor" />
+<p [ngClass]="{'primary':applyColor}">This  is Angular Project</p>
+
+<!--using ngStyle-->
+<h3>using ngStyle For Inline CSS</h3>
+
+<p [ngStyle]="{'color':'blue','font-size':'30px'}">Welcome to the Angular World</p>
+
+<!-- Creating Directives -->
+<h3>Creating Directives</h3>
+
+<!-- <p [appHighlight]="''">Hover Overr the text to see the highlight Text</p>
+
+<p [appHighlight]="'blue'">Hover Overr the text to see the highlight Text</p>
+
+<p [appHighlight]="'green'">Hover Overr the text to see the highlight Text</p>
+
+
+<p>Try to push the into the git Hub</p> -->
+
+
