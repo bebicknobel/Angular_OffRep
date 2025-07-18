@@ -68,6 +68,25 @@
 <p [appHighlight]="'green'">Hover Overr the text to see the highlight Text</p>
 
 
+<h3>Pipes</h3>
+<p>Purchases from {{ company  }} on  Current Date {{ currDate | date:'yyyy-MM-dd h:mm aaa'}}</p>
+
+<p>Short Date : {{currDate |date:'short'}}</p>
 
 
+<p>sending Data From one Component to another</p>
 
+<div>
+  
+  <!-- <app-form (carAdded)="onCarAdded($event)"></app-form>
+  <app-list [carNames]="carNamesAPP"></app-list> -->
+<app-form></app-form>
+<app-list></app-list>
+
+</div>
+
+
+<h2>Life Cycle Hooks</h2>
+<app-child [items]="itemsList" [players]="playerName"> </app-child>
+
+<input type="text" [(ngModel)]="playerName"/>

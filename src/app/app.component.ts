@@ -1,12 +1,15 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { HighlightDirective } from './highlight.directive';
+import { FormComponent } from './form/form.component';
+import { ListComponent } from './list/list.component';
+import { ChildComponent } from "./child/child.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FormsModule,CommonModule,HighlightDirective],
+  imports: [RouterOutlet, FormsModule, CommonModule, HighlightDirective, FormComponent, ListComponent, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -39,4 +42,26 @@ export class AppComponent {
   showMe=false;
 
   applyColor=false;
+
+  company='Accenture';
+  currDate = new Date();
+  
+  carNamesAPP:string []=[];
+
+  onCarAdded(carName:string){
+   
+     console.log(carName,'From App');
+
+      this.carNamesAPP.push(carName);
+    } 
+
+    itemsList=[
+      {id:1,name:'Bebick'},
+      {id:2,name:'Agatheesh'},
+      {id:3,name:'Kunalan'},
+      {id:4,name:'Kavin'},
+      {id:5,name:'Simon'}
+    ]
+   
+     playerName='Virat Kholi';
 }
