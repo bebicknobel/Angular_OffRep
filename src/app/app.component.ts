@@ -68,5 +68,5 @@ export class AppComponent {
    
      playerName='Virat Kholi';
 
-   showME=true;
+   showHello=true;
 }

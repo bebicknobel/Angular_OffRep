@@ -11,6 +11,7 @@ export class HelloComponent implements AfterViewInit,OnInit,OnDestroy{
 
   @ViewChild('nameInput') nameInputs!:ElementRef
  
+  //Focus the input once the View is Initialized
   ngAfterViewInit(): void {
     
     this.nameInputs.nativeElement.focus();
