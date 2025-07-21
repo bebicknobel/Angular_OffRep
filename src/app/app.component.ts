@@ -1,7 +1,7 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
@@ -12,7 +12,7 @@ import { HelloComponent } from "./hello/hello.component";
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, FormsModule, CommonModule, HighlightDirective, FormComponent, ListComponent, ChildComponent,
-    SimpleMessageComponent, HelloComponent],
+            SimpleMessageComponent, HelloComponent,RouterLink,RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

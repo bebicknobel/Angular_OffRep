@@ -106,6 +106,15 @@
 
 <input type="checkbox" [(ngModel)]="showHello"/>
 
+<router-outlet></router-outlet>
+
+<nav>
+  
+  <a routerLink="/home" routerLinkActive="active-link">Home</a> |
+  <a routerLink="/about" routerLinkActive="active-link">About</a> | 
+  <a routerLink="/contact" routerLinkActive="active-link">Contact</a>
+</nav>
+
 
 
 
