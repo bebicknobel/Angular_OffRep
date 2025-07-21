@@ -6,10 +6,13 @@ import { HighlightDirective } from './highlight.directive';
 import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { ChildComponent } from "./child/child.component";
+import { SimpleMessageComponent } from "./simple-message/simple-message.component";
+import { HelloComponent } from "./hello/hello.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule, CommonModule, HighlightDirective, FormComponent, ListComponent, ChildComponent],
+  imports: [RouterOutlet, FormsModule, CommonModule, HighlightDirective, FormComponent, ListComponent, ChildComponent,
+    SimpleMessageComponent, HelloComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -64,4 +67,6 @@ export class AppComponent {
     ]
    
      playerName='Virat Kholi';
+
+   showME=true;
 }

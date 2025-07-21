@@ -88,5 +88,26 @@
 
 <h2>Life Cycle Hooks</h2>
 <app-child [items]="itemsList" [players]="playerName"> </app-child>
-
+<h2>OnChanges</h2>
 <input type="text" [(ngModel)]="playerName"/>
+
+
+<app-simple-message>
+    <p #messageContent>Hello World</p>
+    <p #messageContent>Learning Angular Life cycle Hooks</p>
+</app-simple-message>
+
+
+
+@if(showME){
+<app-hello></app-hello>
+}
+
+
+<input type="checkbox" [(ngModel)]="showME"/>
+
+
+
+
+
+
